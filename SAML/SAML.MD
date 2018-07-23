@@ -8,11 +8,11 @@
     * [보안](#보안)
     * [원리](#원리)
 - [구성](#구성)
-    * [Assertion](#Assertion)
-    * [Protocol](#Protocol)
-    * [Binding](#Binding)
-    * [Profile](#Profile)
-    * [Metadata](#Metadata)
+    * [Assertion](#assertion)
+    * [Protocol](#protocol)
+    * [Binding](#binding)
+    * [Profile](#profile)
+    * [Metadata](#metadata)
 - [관련 링크](#관련-링크)
 
 ## 기본 정보
@@ -121,6 +121,9 @@
         <saml:Issuer>
         <ds:Signature>
         <Extensions>
+    
+    + #### AuthnResponse : Request Abstract Type 상속받음
+            <saml:Assertion> : 인증 정보
 
     * ### Authentication Request
 
@@ -133,7 +136,7 @@
                 ForceAuthn : 보안 컨텍스트에 의존하지 않고 직접 발표자를 인증 T/F
                 IsPassive : 요청자의 사용자 인터페이스를 시각적으로 제어하고 눈에 띄는 방식으로 발표자와 상호 작용 T/F (T일시 시각적 방식 X, default F)
                 AssertionConsumerServiceIndex
-                AssertionConsumerServiceURL : Response 메시지가 반환되는 위치와 binding조건 설정
+                AssertionConsumerServiceURL : Response 메시지가 반환되는 위치와 binding 조건 설정
                 ProtocolBinding
                 AttributeConsumingServiceIndex
                 ProviderName
