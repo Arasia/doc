@@ -65,9 +65,9 @@
 
 ## 추가사항
 - ### java jwt lib별 스펙
-![lib종류](Java_JWT.png)
+    ![lib종류](Java_JWT.png)
 - ### algorithm 지원 스펙
-![알고리즘종류](algorithm.png)
+    ![알고리즘종류](algorithm.png)
 
 ---
 
