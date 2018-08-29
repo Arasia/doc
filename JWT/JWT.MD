@@ -26,9 +26,12 @@
             실제 전달하고자 하는 메세지 Body를 나타낸다.
             권한(Claim)을 담고있다.
                 - iss(Issuer) : 누가 발행 했는지
-                - sub(Subject) : 사용자가 누구인지와 사용자 리소스에 대한 URI
-                - aud(Audience) : 
+                - sub(Subject) : 주체에 관한 진술
+                - aud(Audience) : 주체가 누구인지
                 - exp : 토큰 만료 시점
+                - nbf(Not Before) : 토큰이 인증가능한 시작시간
+                - iat(Issued At) : 해당 JWT가 언제 인증되었는지
+                - jti(JWT ID) : JWT를 식별하는 ID값
                 - scope : 이 토큰으로 이 사용자가 무엇에 접근할 수 있는가(권한)
                 
 
@@ -60,9 +63,11 @@
 
 ---
 
-## lib
+## 추가사항
 - ### java jwt lib별 스펙
 ![lib종류](Java_JWT.png)
+- ### algorithm 지원 스펙
+![알고리즘종류](algorithm.png)
 
 ---
 
