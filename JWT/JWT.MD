@@ -61,6 +61,43 @@
         - 토큰을 사용하여 사용자를 인증할 때마다 항상 보안키로 사명되어 있는지 검사
         - 리플레이 공격에 대비하려면 nonce(jti)와 유효기간(exp) 생성시간을 권한에 포함시켜야 한다.
 
+- ### 토큰 전달 방식
+    - HTTP
+
+            HTTP/1.1 200 OK
+
+            {
+            "access_token": "eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB",
+                "expires_in":3600
+            }
+
+    - HTTP Header
+
+            HTTP/1.1
+
+            GET /stars/pollux
+            Host: galaxies.com
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB
+
+    - HTTP Cookie(Secure)
+
+            HTTP/1.1 200 OK
+
+            Set-Cookie: access_token=eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB; Secure; HttpOnly;
+
+    - Cookie Storage
+
+            GET /stars/pollux
+            Host: galaxies.com
+
+            Cookie: access_token=eyJhbGciOiJIUzI1NiIsI.eyJpc3MiOiJodHRwczotcGxlL.mFrs3Zo8eaSNcxiNfvRh9dqKP4F1cB;
+
+---
+
+## auth0_jwt
+- 기본적인 암호화 방식 : BASE64
+- BASE64로 디코딩하면 signature를 제외한 모든 값을 볼수있다.
+
 ---
 
 ## 추가사항
@@ -73,4 +110,5 @@
 
 ## 참조
 - [JWT 디버거 및 lib](https://jwt.io)
-- [JWT doc](https://tools.ietf.org/html/rfc7519#section-4.1)
+- [JWT v.32 doc](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32)
+- [RFC 7519 doc](https://tools.ietf.org/html/rfc7519)
