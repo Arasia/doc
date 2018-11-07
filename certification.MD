@@ -10,6 +10,8 @@
 ### 3. x509 인증서 생성
     openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
+---
+
 ## DSA
 
 ### 1. key 파일 및 param 파일 생성
@@ -20,6 +22,7 @@
 ### 3. x509 인증서 생성
     openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
+---
 
 ## PEM/PFX 파일 jks 파일로 변환
 
@@ -38,7 +41,9 @@
 ## jks 파일 pfx 파일로 변환
     keytool -importkeystore -srckeystore cert.jks -srcstoretype JKS -srcstorepass "password" -destkeystore cert.pfx -deststoretype PKCS12 -deststorepass "password"
 
-## jsk 파일 비밀번호/alias 변경
+---
+
+## jks 파일 비밀번호/alias 변경
 
 ### 1. keystore 비밀번호 변경
     keytool.exe -storepasswd -new 변경될 비밀번호 -keystore cert.jks
