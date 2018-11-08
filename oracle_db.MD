@@ -1,3 +1,12 @@
+# oracle developer 
+
+## 여러 테이블 표시방법
+
+1. 환경설정 -> 데이터베이스(Database) -> 객체뷰어(ObjectViewer)  
+
+        객체 뷰어 창 자동 고정 <- 체크
+        한 번 눌러 객체 열기 <- 해제
+
 # oracle db가 ip로 접속이 되지 않을 때 
 
 ## 에러코드
