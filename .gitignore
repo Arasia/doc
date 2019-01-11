@@ -14,7 +14,7 @@
 
 *.so
 
- 
+
 
 # Packages #
 
@@ -40,7 +40,7 @@
 
 *.zip
 
- 
+
 
 # Logs and databases #
 
@@ -52,7 +52,7 @@
 
 *.sqlite
 
- 
+
 
 # OS generated files #
 
