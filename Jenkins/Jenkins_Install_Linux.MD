@@ -23,4 +23,4 @@
     - ### add port
             firewall-cmd --permanent --zone=public --add-port=9090/tcp
     - ### reload firewall
-            firewall-cmd reload
+            firewall-cmd --reload
