@@ -31,3 +31,25 @@
                 export JAVA_HOME=java설치위치
 - ### 환경변수 적용
     - ### soruce /etc/profile
+
+---
+
+## java 설치
+- ### java_8
+
+    - ### PPA 추가
+            sudo add-apt-repository ppa:webupd8team/java
+    - ### apt 업데이트
+            sudo apt update
+    - ### java 8 설치
+            sudo apt install oracle-java8-installer
+    - ### version 체크
+            javac -version
+            java -version
+    - ### 환경변수 자동 설정
+            sudo apt install oracle-java8-set-default
+    - ### 환경변수 수동 설정
+            vim /etc/environment
+                JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
+            source /etc/environment
+            export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre

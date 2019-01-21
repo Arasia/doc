@@ -14,21 +14,6 @@
 
         nmap localhost
 
-## java 설치
-- ### java_8
-        1. PPA 추가
-            sudo add-apt-repository ppa:webupd8team/java
-        2. apt 업데이트
-            sudo apt update
-        3. java 8 설치
-            sudo apt install oracle-java8-installer
-        4. version 체크
-            javac -version
-            java -version
-        5-1. 환경변수 자동 설정
-            sudo apt install oracle-java8-set-default
-        5-2. 환경변수 수동 설정
-            vim /etc/environment
-                JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
-            source /etc/environment
-            export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
+## yum이 lock 걸렸을때
+- ### pid 삭제
+        rm -rf /var/run/yum.pid

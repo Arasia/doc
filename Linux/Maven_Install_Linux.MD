@@ -10,10 +10,15 @@
 ## 환경설정
 - ### vi /etc/profile.d/maven.sh
         #!/bin/bash 
-        MAVEN_HOME=/srv/maven 
+        MAVEN_HOME=/usr/lib/apache-maven-3.2.5
         PATH=$MAVEN_HOME/bin:$PATH 
         export PATH MAVEN_HOME 
         export CLASSPATH=.
+
+## 환경설정2
+- ### vi ./.bash_profile
+        export MAVEN_HOME=/usr/lib/apache-maven-3.2.5 추가
+        PATH에 $MAVEN_HOME/bin 추가
 
 ## 실행권한 부여
     chmod +x /etc/profile.d/maven.sh
